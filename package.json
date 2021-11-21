@@ -1,11 +1,11 @@
 {
-  "name": "react-boiler-plate",
+  "name": "movie_app",
   "version": "1.0.0",
-  "description": "react boiler plate",
+  "description": "movie_app",
   "main": "index.js",
   "engine": {
-    "node": "10.16.0",
-    "npm": "6.9.0"
+    "node": "14.15.1",
+    "npm": "6.14.8"
   },
   "scripts": {
     "start": "node server/index.js",
@@ -33,5 +33,13 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alemfla3181/movie_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alemfla3181/movie_app/issues"
+  },
+  "homepage": "https://github.com/alemfla3181/movie_app#readme"
 }

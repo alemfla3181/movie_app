@@ -17,6 +17,7 @@ function FavoritePage() {
         Axios.post('/api/favorite/getFavoredMovie', {useFrom: localStorage.getItem('userId')})
         .then(response => {
             if(response.data.success){
+                console.log(response.data.favorites)
                 setFavorites(response.data.favorites)
             }else{
                 alert('영화 정보를 가져오는데 실패 했습니다.')
@@ -41,7 +42,6 @@ const onClickDelete = (movieId, userFrom) => {
 }
 
 const renderCards = Favorites.map((favorite, index)=>{
-
     const content = (
         <div>
             {favorite.moviePost ?
@@ -56,7 +56,6 @@ const renderCards = Favorites.map((favorite, index)=>{
         <td><button onClick={() => onClickDelete(favorite.movieId, favorite.useFrom)}>Remove</button></td>
     </tr>
 })
-
 
     return (
         <div style={{width: '85%', margin: '3rem auto'}}>

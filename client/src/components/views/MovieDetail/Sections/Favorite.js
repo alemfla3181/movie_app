@@ -23,7 +23,6 @@ function Favorite(props) {
 
     useEffect(() => {
 
-
         Axios.post('/api/favorite/favoriteNumber', variables)
             .then(response => {
                 setFavoriteNumber(response.data.favoriteNumber)
