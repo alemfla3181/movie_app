@@ -7,7 +7,7 @@ import {IMAGE_BASE_URL} from '../../Config';
 function FavoritePage() {
 
     const [Favorites, setFavorites] = useState([])
-
+//
     useEffect(() => {
         fetchFavoredMovie()
 
