@@ -32,12 +32,14 @@ const onClickDelete = (movieId, userFrom) => {
     }
 
     Axios.post('/api/favorite/removeFromFavorite', variables)
-    .then(response => {
-        if(response.data.success){
-            fetchFavoredMovie()
-        }else{
-            alert("리스트에서 지우는데 실패했습니다.")
-        }
+        .then(response => {
+            if (window.confirm("삭제하시겠습니까?")) {
+                if (response.data.success) {
+                    fetchFavoredMovie()
+                } else {
+                    alert("리스트에서 지우는데 실패했습니다.")
+                }
+            }
     })
 }
 
@@ -53,7 +55,7 @@ const renderCards = Favorites.map((favorite, index)=>{
             <td>{favorite.movieTitle}</td>
         </Popover>
         <td>{favorite.movieRunTime} 분</td>
-        <td><button onClick={() => onClickDelete(favorite.movieId, favorite.useFrom)}>Remove</button></td>
+        <td><button onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}>Remove</button></td>
     </tr>
 })
 
