@@ -36,7 +36,7 @@ function MovieDetail(props) {
 
     }, [])
 
-    const toggleActorView = () =>{
+    const toggleActorView = () => {
         setActorToggle(!ActorToggle)
     }
 

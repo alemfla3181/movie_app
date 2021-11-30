@@ -14,10 +14,10 @@ function FavoritePage() {
     }, [])
 
     const fetchFavoredMovie = () => {
-        Axios.post('/api/favorite/getFavoredMovie', {useFrom: localStorage.getItem('userId')})
+        Axios.post('/api/favorite/getFavoredMovie', {userFrom: localStorage.getItem('userId')})
         .then(response => {
             if(response.data.success){
-                console.log(response.data.favorites)
+                //console.log(response.data.favorites)
                 setFavorites(response.data.favorites)
             }else{
                 alert('영화 정보를 가져오는데 실패 했습니다.')
