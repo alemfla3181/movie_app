@@ -12,7 +12,6 @@ function LeftMenu(props) {
             <Menu.Item key="favorite">
                 <a href="/favorite">Favorite</a>
             </Menu.Item>
-    
         </Menu>
     )
 }
