@@ -64,7 +64,6 @@ function LandingPage() {
                 </React.Fragment>
                 ))}
 
-
                 </Row>
 
             </div>
