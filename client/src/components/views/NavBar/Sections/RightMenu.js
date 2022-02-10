@@ -32,9 +32,9 @@ function RightMenu(props) {
   } else {
     return (
       <div className="rightMenu" mode={props.mode}>
-        <div key="logout">
+        <li>
           <a onClick={logoutHandler}>Logout</a>
-        </div>
+        </li>
       </div>
     )
   }
