@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Menu } from 'antd';
 import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { Link, withRouter } from 'react-router-dom';
@@ -21,22 +20,22 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-      <Menu mode={props.mode}>
-        <Menu.Item key="mail">
+      <div className="rightMenu" mode={props.mode}>
+        <li>
           <Link to="/login">Signin</Link>
-        </Menu.Item>
-        <Menu.Item key="app">
-          <Link to="/register">Signup</Link>
-        </Menu.Item>
-      </Menu>
+        </li>
+        <li>
+          <Link to="/register" >Signup</Link>
+        </li>
+      </div>
     )
   } else {
     return (
-      <Menu mode={props.mode}>
-        <Menu.Item key="logout">
+      <div className="rightMenu" mode={props.mode}>
+        <div key="logout">
           <a onClick={logoutHandler}>Logout</a>
-        </Menu.Item>
-      </Menu>
+        </div>
+      </div>
     )
   }
 }

@@ -24,28 +24,19 @@
   color: darkorange;
 }
 
-.menu__container .ant-menu-item {
-  padding: 0px 5px;
-}
-
-.menu__container .ant-menu-submenu-title {
-  padding: 10px 20px;
-}
-
-.menu__container .ant-menu-item a,
-.menu__container .ant-menu-submenu-title a {
-  padding: 10px 15px;
-}
-
-.menu__container .ant-menu-horizontal {
-  border-bottom: none;
-}
-
-.menu__container .menu_left {
+li{
+  position: relative;
+  top: 2.5px;
+  padding: 20px;
+  list-style: none;
   float: left;
 }
 
-.menu__container .menu_rigth {
+.leftMenu{
+  float: left;
+}
+
+.rightMenu{
   float: right;
 }
 
@@ -72,8 +63,8 @@
     display: inline-block !important;
   }
 
-  .menu_left,
-  .menu_rigth {
+  
+  .leftMenu, .rightMenu {
     display: none;
   }
 
