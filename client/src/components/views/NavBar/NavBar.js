@@ -22,10 +22,10 @@ function NavBar() {
                 <Link to="/">MOVIE</Link>
             </div>
             <div className="menu__container">
-                <div className="menu_left">
+                <div className="leftMenu">
                     <LeftMenu mode="horizontal" />
                 </div>
-                <div className="menu_right">
+                <div className="rightMenu" >
                     <RightMenu mode="horizontal" />
                 </div>
                 <Button
@@ -36,15 +36,15 @@ function NavBar() {
                     <Icon type="align-right" />
                 </Button>
                 <Drawer
-                    title="Basic Drawer"
+                    title="Menu"
                     placement="right"
                     className="menu_drawer"
                     closable={false}
                     onClose={onClose}
                     visible={visible}
                 >
-                    <LeftMenu mode="inline" />
-                    <RightMenu mode="inline" />
+                    <LeftMenu mode="horizontal" />
+                    <RightMenu mode="horizontal" />
                 </Drawer>
             </div>
         </nav>

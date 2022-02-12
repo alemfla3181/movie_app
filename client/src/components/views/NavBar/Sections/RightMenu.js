@@ -20,7 +20,7 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-      <div className="rightMenu" mode={props.mode}>
+      <div mode={props.mode}>
         <li>
           <Link to="/login">Signin</Link>
         </li>
@@ -31,7 +31,7 @@ function RightMenu(props) {
     )
   } else {
     return (
-      <div className="rightMenu" mode={props.mode}>
+      <div mode={props.mode}>
         <li>
           <a onClick={logoutHandler}>Logout</a>
         </li>
