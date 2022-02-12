@@ -23,10 +23,10 @@ function NavBar() {
             </div>
             <div className="menu__container">
                 <div className="leftMenu">
-                    <LeftMenu mode="horizontal" />
+                    <LeftMenu />
                 </div>
                 <div className="rightMenu" >
-                    <RightMenu mode="horizontal" />
+                    <RightMenu />
                 </div>
                 <Button
                     className="menu__mobile-button"
@@ -43,8 +43,8 @@ function NavBar() {
                     onClose={onClose}
                     visible={visible}
                 >
-                    <LeftMenu mode="horizontal" />
-                    <RightMenu mode="horizontal" />
+                    <LeftMenu />
+                    <RightMenu />
                 </Drawer>
             </div>
         </nav>
